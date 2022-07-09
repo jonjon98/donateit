@@ -1,25 +1,27 @@
 import React from 'react'
 import SearchBar from './SearchBar.jsx'
 import { useState } from 'react';
+import { Button, Card } from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const Search = ({ searchType }) => {
   var elements = [];
   if(searchType === "posts"){
     //placeholder for the posts, have to extract from DB
     elements = [
-      { id: '1', name: 'This first post is about React (post1)' },
-      { id: '2', name: 'This next post is about Preact (post2)' },
-      { id: '3', name: 'We have yet another React post! (post3)' },
-      { id: '4', name: 'This is the fourth and final post (post4)' },
+      { id: '1', name: "first", desc: 'This first post is about React (post1)', },
+      { id: '2', name: "second", desc: 'This next post is about Preact (post2)' },
+      { id: '3', name: "third", desc: 'We have yet another React post! (post3)' },
+      { id: '4', name: "fourth", desc: 'This is the fourth and final post (post4)' },
     ];
   }
   else if(searchType === "items"){
     //placeholder for the posts, have to extract from DB
     elements = [
-      { id: '1', name: 'This first post is about React (item1)' },
-      { id: '2', name: 'This next post is about Preact (item2)' },
-      { id: '3', name: 'We have yet another React post! (item3)' },
-      { id: '4', name: 'This is the fourth and final post (item4)' },
+      { id: '1', name: "first", desc: 'This first post is about React (item1)' },
+      { id: '2', name: "second", desc: 'This next post is about Preact (item2)' },
+      { id: '3', name: "third", desc: 'We have yet another React post! (item3)' },
+      { id: '4', name: "fourth", desc: 'This is the fourth and final post (item4)' },
     ];
   } 
 
@@ -47,7 +49,20 @@ const Search = ({ searchType }) => {
       />
       <ul>
         {filteredElements.map(elements => (
-          <li key={elements.id}>{elements.name}</li>
+          <li className="d-inline-flex p-2 bd-highlight" key={elements.id}>
+            <Card style={{color: "#000000"}}>
+              <Card.Img />
+              <Card.Body>
+                <Card.Title>
+                  {elements.name}
+                </Card.Title>
+                <Card.Text>
+                  {elements.desc}
+                </Card.Text>
+                <Button variant="primary">Read More</Button>
+              </Card.Body>
+            </Card>
+          </li>
          ))}
       </ul>
     </div>
