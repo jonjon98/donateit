@@ -5,7 +5,7 @@
     flex-direction: column;
     background-color: #002147 !important;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     font-family: 'Poppins';
 }
 .login_links {
@@ -16,10 +16,13 @@
     font-weight: bolder;
 }
 .login_link {
+    font-size: 20px;
     color: white;
     text-decoration: none;
     padding-left: 30px;
     padding-right: 30px;
+}
+.navbar_div {
 }
 .login_main {
     align-items: center;
@@ -28,42 +31,43 @@
     flex-direction: row;
 }
 .login_main img {
-    border-radius: 50px;
-    margin-left: 3%;
+    border-radius: 0px 12px 12px 0px;
+    height: 94%;
 }
 .login_text {
     display: flex;
     flex-direction: column;
 }
 .login_text h1 {
+    width: 70%;
     color: white;
     font-size: 60px;
-    padding-bottom: 2%;
     font-weight: bolder;
 }
 .login_text p {
+    margin-top: 2.3%;
     color: white;
     font-size: 20px;
 }
 .login_button {
-    height: 70px;
-    width: 150px;
-    border-radius: 22px;
-    font-size: 24px;
+    height: 50px;
+    width: 120px;
+    border-radius: 10px;
+    font-size: 20px;
     font-weight: bolder;
     color: #002147;
 }
 .get_started {
     width: 250px;
     height: 70px;
-    border-radius: 22px;
+    border-radius: 10px;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: bolder;
     color: #002147;
 }
 .items_donated {
     background-color: #5FD58C;
-    border-radius: 30px;
+    border-radius: 12px 0px 0px 12px;
     padding: 50px;
 }
 .items_donated p {
@@ -72,4 +76,22 @@
 }
 .items_donated h1 {
     color: black;
+}
+
+@media screen and (max-width: 1400px) {
+    .login_page {
+        height: 100vh;
+    }
+    .login_main {
+        flex-direction: column;
+    }
+    .login_text h1 {
+        width: 100%;
+    }
+    .login_main img {
+        display: none;
+    }
+    .items_donated {
+        border-radius: 12px;
+    }
 }

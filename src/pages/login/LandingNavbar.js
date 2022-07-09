@@ -45,24 +45,24 @@ const LandingNavbar = (props) => {
   return (
     <>
       <Navbar>
-      <Container class="d-flex">
-        <div class="text-white text-decoration-none d-flex flex-direction-row">
+      <Container className="d-flex">
+        <div className="text-white text-decoration-none d-flex flex-direction-row">
           <Navbar.Brand href="/login">
             <img
               src={Logo}
               width="50"
               height="50"
               alt="Logo"
-              class="mt-5"
+              className="mt-5"
             />
           </Navbar.Brand>
-          <div class="text-white font-weight-light display-6 py-5">DonateIt</div>
+          <div className="text-white font-weight-light display-6 py-5">DonateIt</div>
         </div>
-        <div class="login_links">
-          <a class="login_link" href="/login">Home</a>
-          <a class="login_link" href="/about">About</a>
-          <a class="login_link" href="/faq">FAQs</a>
-          <button type="button" class="login_button" onClick={() => handleGoogle(new GoogleAuthProvider())}>
+        <div className="login_links">
+          <a className="login_link" href="/login">Home</a>
+          <a className="login_link" href="/aboutus">About</a>
+          <a className="login_link" href="/faq">FAQs</a>
+          <button type="button" className="login_button" onClick={() => handleGoogle(new GoogleAuthProvider())}>
               {loading ? "Loading ..." : "Login"}
           </button>
         </div>

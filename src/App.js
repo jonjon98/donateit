@@ -20,17 +20,37 @@ function App() {
     <AuthProvider>
       <Router>
           <Routes>
-              <Route path='/' element={<Home />} />
+              <Route path='/' element={
+                <PrivateRoute>
+                  <Home />
+                </PrivateRoute>
+              } />
               <Route path='/Listing' element={<Listing />} />
               <Route path='/Product' element={<Product />} />
               <Route path='/Login' element={<Login />} />
               <Route path='/aboutus' element={<AboutUs />} />
               <Route path='/faq' element={<Faq />} />
               <Route path='/Signup' element={<Signup />} />
-              <Route path='/Profile' element={<PrivateRoute Component={Profile} />} />
-              <Route path='/Recycling' element={<PrivateRoute Component={Recycling} />} />
-              <Route path='/Favourites' element={<PrivateRoute Component={Favourites} />} />
-              <Route path='/EditListing' element={<PrivateRoute Component={EditListing} />} />
+              <Route path='/Profile' element={
+                <PrivateRoute>
+                  <Profile />
+                </PrivateRoute>
+              } />
+              <Route path='/Recycling' element={
+                <PrivateRoute>
+                  <Recycling />
+                </PrivateRoute>
+              } />
+              <Route path='/Favourites' element={
+                <PrivateRoute>
+                  <Favourites />
+                </PrivateRoute>
+              } />
+              <Route path='/EditListing' element={
+                <PrivateRoute>
+                  <EditListing />
+                </PrivateRoute>
+              } />
               <Route path='*' element={<NotFound />} />
           </Routes>
       </Router>
