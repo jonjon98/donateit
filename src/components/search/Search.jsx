@@ -10,7 +10,6 @@ import { onSnapshot, orderBy, collection, query as fireQuery } from 'firebase/fi
 
 const Search = ({ searchType }) => {
   //handle data extraction from DB
-<<<<<<< HEAD
   const [elements, setElements] = useState([]);
   useEffect(() => {
     if(searchType === "posts"){
@@ -114,14 +113,12 @@ const Search = ({ searchType }) => {
   
   return (
     <div>
-
       {/* Posts */}
       <div hidden={!boolPosts}>
         <p>Posts</p>
-        <SearchBar  
+      <SearchBar  
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}               
-<<<<<<< HEAD
       />
       <ul>
         {filteredElements.map(element => (
@@ -252,8 +249,6 @@ const Search = ({ searchType }) => {
           handleClose={togglePopup}
         />}
       </div>   
-
->>>>>>> main
     </div>
   )
 }
