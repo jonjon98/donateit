@@ -23,6 +23,7 @@ const Home = () => {
       <Container className="py-3">
         <button onClick={handleSignout} class="btn">Logout</button>
         <p className="font-weight-bold">Bold text.</p>
+        <p className="font-weight-bold">DonateIt</p>
         <Search searchType="posts"/>
       </Container>
     </div>
