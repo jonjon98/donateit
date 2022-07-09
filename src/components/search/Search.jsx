@@ -46,8 +46,8 @@ const Search = ({ searchType }) => {
         setSearchQuery={setSearchQuery}               
       />
       <ul>
-        {filteredElements.map(post => (
-          <li key={post.id}>{post.name}</li>
+        {filteredElements.map(elements => (
+          <li key={elements.id}>{elements.name}</li>
          ))}
       </ul>
     </div>

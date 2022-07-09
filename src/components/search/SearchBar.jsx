@@ -5,9 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 const SearchBar = ({ searchQuery, setSearchQuery }) => {
   return (
     <form action="/" method="get">
-        <label htmlFor="header-search">
-            <span className="visually-hidden">Search</span>
-        </label>
         <input
             value={searchQuery}
             onInput={e => setSearchQuery(e.target.value)}
