@@ -10,7 +10,8 @@ const Search = ({ searchType }) => {
   var elements = [];
   var boolPosts = false;
   var boolItems = false;
-  if(searchType === "posts"){
+  var boolRewards = false;
+  if (searchType === "posts"){
     //placeholder for the posts, have to extract from DB
     elements = [
       { id: '0', name: "first", desc: '(post1)', about: 'This first post is about React (post1)', },
@@ -20,8 +21,9 @@ const Search = ({ searchType }) => {
     ];
     boolPosts = true;
     boolItems = false;
+    boolRewards = false;
   }
-  else if(searchType === "items"){
+  else if (searchType === "items"){
     //placeholder for the posts, have to extract from DB
     elements = [
       { id: '0', name: "first", desc: '(item1)', about: 'This first post is about React (item1)' },
@@ -31,7 +33,19 @@ const Search = ({ searchType }) => {
     ];
     boolPosts = false;
     boolItems = true;
+    boolRewards = false;
   } 
+  else if (searchType === "rewards"){
+    elements = [
+      { id: '0', name: "Grab Voucher", desc: '(reward1)', about: 'This first post is about React (Grab Voucher)', },
+      { id: '1', name: "StarBucks Voucher", desc: '(reward2)', about: 'This next post is about Preact (StarBucks Voucher)' },
+      { id: '2', name: "Cruise Vacation", desc: '(reward3)', about: 'We have yet another React post! (Cruise Vacation)' },
+      { id: '3', name: "Nintendo Switch", desc: '(reward4)', about: 'This is the fourth and final post (Nintendo Switch)' },
+    ];
+    boolPosts = false;
+    boolItems = false;
+    boolRewards = true;
+  }
 
   //handle searching algorithm
   const filterElements = (elements, query) => {
@@ -61,14 +75,14 @@ const Search = ({ searchType }) => {
   
   return (
     <div>
-      <SearchBar  
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}               
-      />
 
       {/* Posts */}
       <div hidden={!boolPosts}>
         <p>Posts</p>
+        <SearchBar  
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}               
+        />
         <ul>
           {filteredElements.map(elements => (
             <li className="d-inline-flex p-2 bd-highlight" key={elements.id}>
@@ -87,11 +101,24 @@ const Search = ({ searchType }) => {
             </li>
            ))}          
         </ul>
+        {/* Popup */}
+        {isOpen && <Popup
+          content={<>
+            <b>Design your Popup</b>
+            <p>{elements[elementSelected].about}</p>
+            <button>Upvote</button>
+          </>}
+          handleClose={togglePopup}
+        />}
       </div>
 
       {/* Items */}
       <div hidden={!boolItems}>
         <p>Items</p>
+        <SearchBar  
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}               
+        />
         <ul>
           {filteredElements.map(elements => (
             <li className="d-inline-flex p-2 bd-highlight" key={elements.id}>
@@ -110,15 +137,53 @@ const Search = ({ searchType }) => {
             </li>
            ))}          
         </ul>
+        {/* Popup */}
+        {isOpen && <Popup
+          content={<>
+            <b>Design your Popup</b>
+            <p>{elements[elementSelected].about}</p>
+            <button>Purchase</button>
+          </>}
+          handleClose={togglePopup}
+        />}
       </div>
-      {isOpen && <Popup
-        content={<>
-          <b>Design your Popup</b>
-          <p>{elements[elementSelected].about}</p>
-          <button>Upvote</button>
-        </>}
-        handleClose={togglePopup}
-      />}
+
+      {/* Rewards */}
+      <div hidden={!boolRewards}>     
+        <p>Rewards</p>
+        <SearchBar  
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}               
+        />
+        <ul>
+          {elements.map(elements => (
+            <li className="d-inline-flex p-2 bd-highlight" key={elements.id}>
+              <Card style={{color: "#000000"}}>
+                <Card.Img />
+                <Card.Body>
+                  <Card.Title>
+                    {elements.name}
+                  </Card.Title>
+                  <Card.Text>
+                    {elements.desc}
+                  </Card.Text>
+                  <Button variant="primary" onClick={()=>togglePopup(elements.id)}>Read More</Button>
+                </Card.Body>
+              </Card>
+            </li>
+          ))}          
+        </ul>
+        {/* Popup */}
+        {isOpen && <Popup
+          content={<>
+            <b>Design your Popup</b>
+            <p>{elements[elementSelected].about}</p>
+            <button>Purchase</button>
+          </>}
+          handleClose={togglePopup}
+        />}
+      </div>   
+
     </div>
   )
 }
