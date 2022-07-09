@@ -1,5 +1,4 @@
 import React from 'react'
-import './searchBar.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 const SearchBar = ({ searchQuery, setSearchQuery }) => {
