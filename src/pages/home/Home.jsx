@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div>
       <Container className="py-3">
-        <p className="font-weight-bold">Bold text.</p>
+        <p className="font-weight-bold">DonateIt</p>
         <Search searchType="posts"/>
       </Container>
     </div>
