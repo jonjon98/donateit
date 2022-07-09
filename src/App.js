@@ -6,6 +6,7 @@ import './App.css';
 import Home from './pages/home/Home.jsx'
 import Product from './pages/product/Product.jsx'
 import Login from './pages/login/Login.jsx'
+import Signup from './pages/signup/Signup.jsx'
 import Profile from './pages/profile/Profile.jsx'
 import Favourites from './pages/favourites/Favourites.jsx'
 import EditListing from './pages/editListing/EditListing.jsx'
@@ -21,6 +22,7 @@ function App() {
               <Route path='/' element={<Home />} />
               <Route path='/Product' element={<Product />} />
               <Route path='/Login' element={<Login />} />
+              <Route path='/Signup' element={<Signup />} />
               <Route path='/Profile' element={<Profile />} />
               <Route path='/Favourites' element={<Favourites />} />
               <Route path='/EditListing' element={<EditListing />} />
