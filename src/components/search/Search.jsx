@@ -10,35 +10,6 @@ import { onSnapshot, orderBy, collection, query as fireQuery } from 'firebase/fi
 
 const Search = ({ searchType }) => {
   //handle data extraction from DB
-<<<<<<< HEAD
-  const [elements, setElements] = useState([]);
-  useEffect(() => {
-    if(searchType === "posts"){
-      //placeholder for the posts, have to extract from DB
-        const q = fireQuery(collection(db, "posts"), orderBy("createdAt", "asc"));
-
-        onSnapshot(q, (querySnapshot) => {
-          let elm = [];
-          querySnapshot.forEach((doc) => {
-            elm.push(doc.data());
-          })
-          setElements(elm);
-        })
-    }
-    else if(searchType === "items"){
-      //placeholder for the posts, have to extract from DB
-      const q = fireQuery(collection(db, "items"), orderBy("createdAt", "asc"));
-
-      onSnapshot(q, (querySnapshot) => {
-        let elm = [];
-        querySnapshot.forEach((doc) => {
-          elm.push(doc.data());
-        })
-        setElements(elm);
-      })
-    } 
-  })
-=======
   var elements = [];
   var boolPosts = false;
   var boolItems = false;
@@ -78,7 +49,6 @@ const Search = ({ searchType }) => {
     boolItems = false;
     boolRewards = true;
   }
->>>>>>> main
 
   //handle searching algorithm
   const filterElements = (elements, query) => {
@@ -121,36 +91,6 @@ const Search = ({ searchType }) => {
         <SearchBar  
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}               
-<<<<<<< HEAD
-      />
-      <ul>
-        {filteredElements.map(element => (
-          <li className="d-inline-flex p-2 bd-highlight" key={element.id}>
-            <Card style={{color: "#000000"}}>
-              <Card.Img />
-              <Card.Body>
-                <Card.Title>
-                  {element.name}
-                </Card.Title>
-                <Card.Text>
-                  {element.desc}
-                </Card.Text>
-                <Button variant="primary" onClick={()=>togglePopup(element)}>Read More</Button>
-              </Card.Body>
-            </Card>
-          </li>
-         ))}          
-      </ul>
-      {isOpen && <Popup
-        content={<>
-          <b>{elementSelected.name}</b>
-            <p>{elementSelected.about}</p>
-            <p>{new Date(elementSelected.createdAt.seconds * 1000).toLocaleDateString("en-US")}</p>
-          <button>Upvote</button>
-        </>}
-        handleClose={togglePopup}
-      />}
-=======
         />
         <ul>
           {filteredElements.map(elements => (
@@ -253,7 +193,6 @@ const Search = ({ searchType }) => {
         />}
       </div>   
 
->>>>>>> main
     </div>
   )
 }
