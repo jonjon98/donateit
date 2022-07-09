@@ -1,9 +1,7 @@
-import React, { useContext, createContext, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { createContext, useState } from "react";
 import { auth, db } from "../../firebase";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { updateDoc, doc, setDoc, Timestamp } from "firebase/firestore";
-import { AuthContext } from "../../context/auth";
+import { doc, setDoc, Timestamp } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import { Navbar, Container } from "react-bootstrap";
 import Logo from '../../media/logo.svg';
@@ -19,7 +17,7 @@ const LandingNavbar = (props) => {
     loading: false,
   });
 
-  const { error, loading } = data;
+  const { loading } = data;
 
   const handleGoogle = async (provider) => {
     setData({ ...data, error: null, loading: true });
@@ -46,30 +44,26 @@ const LandingNavbar = (props) => {
 
   return (
     <>
-      <Navbar bg="dark">
-      <Container>
-        <Navbar.Brand href="/login" class="align-items-center justify-content-center text-white text-decoration-none d-flex flex-direction-row">
-          <img
-            src={Logo}
-            width="70"
-            height="70"
-            class="d-inline-block align-top"
-            alt="Logo"
-          />
-          <div class="text-white font-weight-light display-6 p-5">DonateIt</div>
-        </Navbar.Brand>
-        <div class="d-flex ">
-          <li class="nav-item">
-            <a class="nav-link" href="/login">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/faq">FAQs</a>
-          </li>
-          <button type="button" class="btn btn-light btn-lg rounded" onClick={() => handleGoogle(new GoogleAuthProvider())}>
-              {loading ? "Logging in ..." : "Login"}
+      <Navbar>
+      <Container class="d-flex">
+        <div class="text-white text-decoration-none d-flex flex-direction-row">
+          <Navbar.Brand href="/login">
+            <img
+              src={Logo}
+              width="50"
+              height="50"
+              alt="Logo"
+              class="mt-5"
+            />
+          </Navbar.Brand>
+          <div class="text-white font-weight-light display-6 py-5">DonateIt</div>
+        </div>
+        <div class="login_links">
+          <a class="login_link" href="/login">Home</a>
+          <a class="login_link" href="/about">About</a>
+          <a class="login_link" href="/faq">FAQs</a>
+          <button type="button" class="login_button" onClick={() => handleGoogle(new GoogleAuthProvider())}>
+              {loading ? "Loading ..." : "Login"}
           </button>
         </div>
       </Container>

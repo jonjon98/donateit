@@ -1,6 +1,8 @@
 import Home from './pages/home/Home.jsx'
 import Product from './pages/product/Product.jsx'
 import Login from './pages/login/Login.jsx'
+import AboutUs from './pages/login/AboutUs.jsx'
+import Faq from './pages/login/Faq.jx'
 import Signup from './pages/signup/Signup.jsx'
 import Profile from './pages/profile/Profile.jsx'
 import Favourites from './pages/favourites/Favourites.jsx'
@@ -19,6 +21,8 @@ function App() {
               <Route path='/' element={<Home />} />
               <Route path='/Product' element={<Product />} />
               <Route path='/Login' element={<Login />} />
+              <Route path='/aboutus' element={<AboutUs />} />
+              <Route path='/faq' element={<Faq />} />
               <Route path='/Signup' element={<Signup />} />
               <Route path='/Profile' element={<PrivateRoute Component={Profile} />} />
               <Route path='/Favourites' element={<PrivateRoute Component={Favourites} />} />
