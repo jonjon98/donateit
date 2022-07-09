@@ -8,7 +8,7 @@ import Signup from './pages/signup/Signup.jsx'
 import Profile from './pages/profile/Profile.jsx'
 import Recycling from './pages/recycling/Recycling.jsx'
 import Favourites from './pages/favourites/Favourites.jsx'
-import EditListing from './pages/editListing/EditListing.jsx'
+import CreateListing from './pages/createListing/CreateListing.jsx'
 import Rewards from './pages/rewards/Rewards.jsx'
 import NotFound from './pages/notFound/NotFound.jsx'
 import PrivateRoute from './context/PrivateRoute.js'
@@ -47,9 +47,9 @@ function App() {
                   <Favourites />
                 </PrivateRoute>
               } />
-              <Route path='/EditListing' element={
+              <Route path='/createListing' element={
                 <PrivateRoute>
-                  <EditListing />
+                  <CreateListing />
                 </PrivateRoute>
               } />
               <Route path='/Rewards' element={
