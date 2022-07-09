@@ -18,7 +18,7 @@ const Login = () => {
             <h1>Reduce your wastage</h1>
             <p>Lorem sodjosdjosjdLorem sodjosdjosjdLorem </p>
             <div className="py-5 d-flex">
-              <button onClick={() => navigate('/aboutus')} class="get_started">Get Started</button>
+              <button onClick={() => navigate('/aboutus')} className="get_started">Get Started</button>
             </div>  
             <div className="items_donated">
               <p>Items donated so far</p>

@@ -9,6 +9,7 @@ import Profile from './pages/profile/Profile.jsx'
 import Recycling from './pages/recycling/Recycling.jsx'
 import Favourites from './pages/favourites/Favourites.jsx'
 import EditListing from './pages/editListing/EditListing.jsx'
+import Rewards from './pages/rewards/Rewards.jsx'
 import NotFound from './pages/notFound/NotFound.jsx'
 import PrivateRoute from './context/PrivateRoute.js'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -49,6 +50,11 @@ function App() {
               <Route path='/EditListing' element={
                 <PrivateRoute>
                   <EditListing />
+                </PrivateRoute>
+              } />
+              <Route path='/Rewards' element={
+                <PrivateRoute>
+                  <Rewards />
                 </PrivateRoute>
               } />
               <Route path='*' element={<NotFound />} />
