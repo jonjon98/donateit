@@ -119,10 +119,10 @@ const Search = ({ searchType }) => {
         </ul>
         {isOpen && <Popup
           content={<>
-            <b>{elementSelected.name}</b>
+            <h1 className="font-weight-bold">{elementSelected.name}</h1>
               <p>{elementSelected.about}</p>
               <p>{new Date(elementSelected.createdAt.seconds * 1000).toLocaleDateString("en-US")}</p>
-              <img alt="img" src={elementSelected.image}></img>
+              <img alt="img" width="400" height="500" src={elementSelected.image}></img>
             <button>Upvote</button>
           </>}
           handleClose={togglePopup}
@@ -154,6 +154,7 @@ const Search = ({ searchType }) => {
             <b>{elementSelected.name}</b>
               <p>{elementSelected.about}</p>
               <p>{new Date(elementSelected.createdAt.seconds * 1000).toLocaleDateString("en-US")}</p>
+              <img alt="img" width="400" height="500" src={elementSelected.image}></img>
             <button>Purchase</button>
           </>}
           handleClose={togglePopup}
