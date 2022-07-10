@@ -129,9 +129,21 @@ _Below is an example of how you can instruct your audience on installing and set
 
 2. Login through your google account and it would bring you to the home page.
 
+[![Home Popup Screen Shot][home-popup-screenshot]](https://example.com)
+
 3. Here, you are able to find the locations of all the recycling points in Singapore and also be able to look at posts from other users who are doing the recycling.
 
 4. Each upvote on a user's post would give them reward points which they could use to claim rewards.
+
+<h3>Product Page</h3>
+
+[![Product Page Screen Shot][products-screenshot]](https://example.com)
+1. Click on the products tab at the top to navigate to the rewards page.
+
+[![Product Popup Page Screen Shot][products-popup-screenshot]](https://example.com)
+2. Here, you can purchase products which others sell using reward points.
+
+<h3>Rewards Page</h3>
 
 [![Rewards Page Screen Shot][rewards-screenshot]](https://example.com)
 
@@ -158,6 +170,9 @@ Project Link: [https://github.com/jonjon98/donateit](https://github.com/your_use
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [login-screenshot]: ./src/media/loginpage.png
 [home-screenshot]: ./src/media/homepage.png
+[home-popup-screenshot]:./src/media/homepopup.png
+[products-screenshot]:/src/media/productspage.png
+[products-popup-screenshot]:/src/media/productspopup.png
 [rewards-screenshot]: ./src/media/rewardspage.png
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
