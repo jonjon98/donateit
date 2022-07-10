@@ -66,7 +66,7 @@
 ## About The Project
 <h3>Login Page</h3>
 
-[![Login Page Screen Shot][login-screenshot]](https://melodious-jelly-bcd17e.netlify.app/login)
+[![Login Page Screen Shot][login-screenshot]](https://donateit.netlify.app/login)
 <h3>Background</h3>
 In recent years, there has been an increase in the products bought by individuals in developed countries due to the advent of online shopping. This has been made more prevalent due the pandemic causing more people to purchase online goods. This has caused an increase in the number of impulse purchases leading to more items being discarded. Therefore causing the wastage of the population as a whole to increase.
 We have decided to come up with this website to allow users to be more environmentally friendly and donate their items to others when they no longer need them.
@@ -157,7 +157,7 @@ _Below is an example of how you can instruct your audience on installing and set
 
 <h3>Profile Page</h3>
 
-[![Profile Page Screen Shot][profile-screenshot]](https://melodious-jelly-bcd17e.netlify.app/profile)
+[![Profile Page Screen Shot][profile-screenshot]](https://donateit.netlify.app/profile)
 
 1. Click on the profile tab at the top to navigate to the profile page.
 
