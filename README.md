@@ -156,6 +156,7 @@ _Below is an example of how you can instruct your audience on installing and set
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <h3>Profile Page</h3>
+
 [![Profile Page Screen Shot][profile-screenshot]](https://melodious-jelly-bcd17e.netlify.app/profile)
 
 1. Click on the profile tab at the top to navigate to the profile page.
