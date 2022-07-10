@@ -22,7 +22,7 @@ const Login = () => {
             </div>  
             <div className="items_donated">
               <p>Items donated so far</p>
-              <h1>40283</h1>
+              <h1>40,283</h1>
             </div>
           </div>
           <img src={Donate} alt=""></img>
