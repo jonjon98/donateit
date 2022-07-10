@@ -7,7 +7,7 @@ import pic3 from '../../media/ryan-hoffman-6Nub980bI3I-unsplash.jpg'
 import pic4 from '../../media/icon.png'
 import { useState } from 'react';
 import { db } from '../../firebase';
-import { Container, Row, Col, Form, Image, Button, Card } from 'react-bootstrap'
+import { Container, Row, Col, Image, Button, Card } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useEffect } from 'react';
 import { onSnapshot, orderBy, collection, query as fireQuery } from 'firebase/firestore';
