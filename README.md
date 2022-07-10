@@ -158,6 +158,9 @@ _Below is an example of how you can instruct your audience on installing and set
 <h3>Profile Page</h3>
 ![image](https://user-images.githubusercontent.com/63844743/178131077-d491c35c-e49f-4e01-a8a4-0f996444a3d9.png)
 
+1. Click on the profile tab at the top to navigate to the profile page.
+
+2. Here, you can look at your previous listings/posts.
 
 <!-- CONTACT -->
 ## Contact
