@@ -1,11 +1,12 @@
-.box {
-    z-index: 9999;
+.box_content {
     border: 0px;
     margin: 0px;
     padding: 0px 0px 10px 0px;
 }
 .form_contents {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     height: 100%;
 }

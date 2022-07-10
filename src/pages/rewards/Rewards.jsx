@@ -1,12 +1,13 @@
 import React from 'react'
 import Search from '../../components/search/Search.jsx'
 import { Container } from 'react-bootstrap'
+import NavigationBar from '../../components/navbar/NavigationBar.jsx'
 
 const Rewards = () => {
   return (
     <div>
       <Container className="py-3">
-        <p className="font-weight-bold">DonateIt</p>
+        <NavigationBar></NavigationBar>
         <Search searchType="rewards"/>
       </Container>
     </div>
