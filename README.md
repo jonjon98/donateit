@@ -125,13 +125,13 @@ _Below is an example of how you can instruct your audience on installing and set
 ## Usage
 <h3>Home Page</h3>
 
-[![Home Page Screen Shot][home-screenshot]](https://melodious-jelly-bcd17e.netlify.app/)
+[![Home Page Screen Shot][home-screenshot]](https://donateit.netlify.app/)
 
 1. Run `npm start` to get it running locally.
 
 2. Login through your google account and it would bring you to the home page.
 
-[![Home Popup Screen Shot][home-popup-screenshot]](https://melodious-jelly-bcd17e.netlify.app/)
+[![Home Popup Screen Shot][home-popup-screenshot]](https://donateit.netlify.app/)
 
 3. Here, you are able to find the locations of all the recycling points in Singapore and also be able to look at posts from other users who are doing the recycling.
 
@@ -139,15 +139,15 @@ _Below is an example of how you can instruct your audience on installing and set
 
 <h3>Product Page</h3>
 
-[![Product Page Screen Shot][products-screenshot]](https://melodious-jelly-bcd17e.netlify.app/listing)
+[![Product Page Screen Shot][products-screenshot]](https://donateit.netlify.app/listing)
 1. Click on the products tab at the top to navigate to the rewards page.
 
-[![Product Popup Page Screen Shot][products-popup-screenshot]](https://melodious-jelly-bcd17e.netlify.app/listing)
+[![Product Popup Page Screen Shot][products-popup-screenshot]](https://donateit.netlify.app/listing)
 2. Here, you can purchase products which others sell using reward points.
 
 <h3>Rewards Page</h3>
 
-[![Rewards Page Screen Shot][rewards-screenshot]](https://melodious-jelly-bcd17e.netlify.app/rewards)
+[![Rewards Page Screen Shot][rewards-screenshot]](https://donateit.netlify.app/rewards)
 
 1. Click on the rewards tab at the top to navigate to the rewards page.
 
