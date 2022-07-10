@@ -139,15 +139,15 @@ _Below is an example of how you can instruct your audience on installing and set
 
 <h3>Product Page</h3>
 
-[![Product Page Screen Shot][products-screenshot]](https://example.com)
+[![Product Page Screen Shot][products-screenshot]](https://melodious-jelly-bcd17e.netlify.app/listing)
 1. Click on the products tab at the top to navigate to the rewards page.
 
-[![Product Popup Page Screen Shot][products-popup-screenshot]](https://example.com)
+[![Product Popup Page Screen Shot][products-popup-screenshot]](https://melodious-jelly-bcd17e.netlify.app/listing)
 2. Here, you can purchase products which others sell using reward points.
 
 <h3>Rewards Page</h3>
 
-[![Rewards Page Screen Shot][rewards-screenshot]](https://example.com)
+[![Rewards Page Screen Shot][rewards-screenshot]](https://melodious-jelly-bcd17e.netlify.app/rewards)
 
 1. Click on the rewards tab at the top to navigate to the rewards page.
 
