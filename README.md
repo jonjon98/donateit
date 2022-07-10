@@ -156,7 +156,7 @@ _Below is an example of how you can instruct your audience on installing and set
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <h3>Profile Page</h3>
-![image](https://user-images.githubusercontent.com/63844743/178131077-d491c35c-e49f-4e01-a8a4-0f996444a3d9.png)
+[![Profile Page Screen Shot][profile-screenshot]](https://melodious-jelly-bcd17e.netlify.app/profile)
 
 1. Click on the profile tab at the top to navigate to the profile page.
 
@@ -183,6 +183,7 @@ Project Link: [https://github.com/jonjon98/donateit](https://github.com/your_use
 [products-screenshot]:/src/media/productspage.png
 [products-popup-screenshot]:/src/media/productspopup.png
 [rewards-screenshot]: ./src/media/rewardspage.png
+[profile-screenshot]: ./src/media/profilepage.png
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [Firebase]: https://img.shields.io/badge/firebase-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
