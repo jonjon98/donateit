@@ -83,6 +83,7 @@ const Search = ({ searchType }) => {
     desc: "",
     image: "",
     name: "",
+    from: "",
   });
  
   const togglePopup = (element) => {

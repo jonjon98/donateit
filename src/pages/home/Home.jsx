@@ -1,28 +1,16 @@
 import React from 'react'
-import { auth, db } from "../../firebase";
-import { signOut } from "firebase/auth";
-import { updateDoc, doc } from "firebase/firestore";
-import { useNavigate } from "react-router-dom";
+import NavigationBar from '../../components/navbar/NavigationBar.jsx';
 import Search from '../../components/search/Search.jsx'
 import { Container } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import CreateListing from '../createListing/CreateListing';
 
 const Home = () => {
-  const navigate = useNavigate()
-
-  const handleSignout = async () => {
-    await updateDoc(doc(db, "users", auth.currentUser.uid), {
-      isOnline: false,
-    });
-    await signOut(auth);
-    navigate("/login");
-  };
-
   return (
     <div>
       <Container className="py-3">
-        <button onClick={handleSignout} className="btn">Logout</button>
-        <p className="font-weight-bold">DonateIt</p>
+        <NavigationBar searchType="posts"></NavigationBar>
+        <CreateListing></CreateListing>
         <Search searchType="posts"/>
       </Container>
     </div>
