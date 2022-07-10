@@ -56,7 +56,7 @@ const Search = ({ searchType }) => {
       setItems(false);
       setRewards(true);
     } 
-  })
+  }, [searchType])
 
   //handle searching algorithm
   const filterElements = (elements, query) => {
@@ -97,14 +97,13 @@ const Search = ({ searchType }) => {
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}               
       />
-
       {/* Posts */}
       <div hidden={!posts}>
         <ul>
           {filteredElements.map(element => (
             <li className="d-inline-flex p-2 bd-highlight" key={element.id}>
               <Card style={{color: "#000000"}}>
-                <Card.Img />
+                <Card.Img/>
                 <Card.Body>
                   <Card.Title>
                     {element.name}
@@ -123,6 +122,7 @@ const Search = ({ searchType }) => {
             <b>{elementSelected.name}</b>
               <p>{elementSelected.about}</p>
               <p>{new Date(elementSelected.createdAt.seconds * 1000).toLocaleDateString("en-US")}</p>
+              <img alt="img" src={elementSelected.image}></img>
             <button>Upvote</button>
           </>}
           handleClose={togglePopup}

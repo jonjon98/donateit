@@ -38,6 +38,7 @@ const NavigationBar = (props) => {
           <div className="font-weight-light display-6 py-5">DonateIt</div>
         </div>
         <div className="navigation">
+          <a className="nav_link" href="/">Home</a>
           <a className="nav_link" href="/rewards">Rewards</a>
           <button onClick={handleSignout} className="btn btn-dark">Logout</button>
         </div>

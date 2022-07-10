@@ -75,7 +75,7 @@ const CreateListing = ({ searchType }) => {
   
   
   return (
-    <div className="box">
+    <div className="box_content">
         <div>
           <button className="btn btn-dark" onClick={togglePopup}>Create</button>
         </div>
