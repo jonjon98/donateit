@@ -24,9 +24,9 @@
     <br />
     <a href="https://www.youtube.com/watch?v=Xgsot9SubOM">View Demo</a>
     ·
-    <a href="https://github.com/jonjon98/donateit/">Report Bug</a>
+    <a href="mailto: donateitlifehack@gmail.com">Report Bug</a>
     ·
-    <a href="https://github.com/jonjon98/donateit/">Request Feature</a>
+    <a href="mailto: donateitlifehack@gmail.com">Request Feature</a>
   </p>
 </div>
 
