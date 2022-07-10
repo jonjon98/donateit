@@ -67,7 +67,7 @@ const CreateListing = ({ searchType }) => {
         from: "",
       });
       setImg("");
-      navigate('/createListing');
+      navigate(0);
     } catch (err) {
       setListingSelected({ ...listingSelected, error: err.message, loading: false });
     }
