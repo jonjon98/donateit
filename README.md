@@ -24,7 +24,7 @@
     <br />
     <a href="https://www.youtube.com/watch?v=Xgsot9SubOM">View Video Demo</a>
     ·
-    <a href="https://melodious-jelly-bcd17e.netlify.app/">Try Demo deployed on Netlifly</a>
+    <a href="https://donateit.netlify.app/">Try Demo deployed on Netlifly</a>
     ·
     <a href="mailto: donateitlifehack@gmail.com">Report Bug</a>
     ·
