@@ -22,7 +22,7 @@
     <a href="https://github.com/jonjon98/donateit/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/jonjon98/donateit/">View Demo</a>
+    <a href="https://www.youtube.com/watch?v=Xgsot9SubOM">View Demo</a>
     ·
     <a href="https://github.com/jonjon98/donateit/">Report Bug</a>
     ·
