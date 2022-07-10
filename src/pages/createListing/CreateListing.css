@@ -1,0 +1,30 @@
+.box_content {
+    border: 0px;
+    margin: 0px;
+    padding: 0px 0px 10px 0px;
+}
+.form_contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+.input_container {
+    width: 100%;
+}
+.input_container input {
+    width: 100%;
+}
+.form_contents button {
+    height: 50px;
+    width: 120px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #002147;
+}
+.button_container {
+    display: flex;
+    padding-top: 5%;
+}

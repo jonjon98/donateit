@@ -63,7 +63,7 @@ const Search = ({ searchType }) => {
       setItems(false);
       setRewards(true);
     } 
-  })
+  }, [searchType])
 
   //handle searching algorithm
   const filterElements = (elements, query) => {
@@ -91,6 +91,7 @@ const Search = ({ searchType }) => {
     desc: "",
     image: "",
     name: "",
+    from: "",
   });
  
   const togglePopup = (element) => {
@@ -104,61 +105,13 @@ const Search = ({ searchType }) => {
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}               
       />
-      <ul>
-        {filteredElements.map(element => (
-          <li className="d-inline-flex p-2 bd-highlight" key={element.id}>
-            <Card style={{color: "#000000"}}>
-              <Card.Img />
-              <Card.Body>
-                <Card.Title>
-                  {element.name}
-                </Card.Title>
-                <Card.Text>
-                  {element.desc}
-                </Card.Text>
-                <Button variant="primary" onClick={()=>togglePopup(element)}>Read More</Button>
-              </Card.Body>
-            </Card>
-          </li>
-         ))}          
-      </ul>
-      {isOpen && <Popup
-        content={<>
-          <div className="maincontainer">
-            <Container>
-              <Row></Row>
-              <Row>
-                <Col><Image src={pic1} fluid></Image></Col>
-                <Col><Image src={pic2} fluid></Image></Col>
-                <Col><Image src={pic3} fluid></Image></Col>
-              </Row>
-              <Row className='align-items-center'>
-                <Col sm={8}>
-                  {elementSelected.about}
-                  {elementSelected.desc}
-                </Col>
-                <Col sm={4}>
-                  <Row><Button variant='outline-secondary' style={{maxwidth:'50%', margin:'20px', marginBottom:'20px'}}>
-                  <Image src={pic4} fluid width={50} style={{marginRight:'20px'}}></Image>
-                  {elementSelected.createdBy}
-                  </Button>{' '}</Row>
-                  <Button variant='danger'>{elementSelected.likes} Likes</Button>{' '}
-                  <Button variant='secondary'>Interested</Button>{' '}
-                </Col>
-              </Row>
-            </Container>
-          </div>
-        </>}
-        handleClose={togglePopup}
-      />}
-
       {/* Posts */}
       <div hidden={!posts}>
         <ul>
           {filteredElements.map(element => (
             <li className="d-inline-flex p-2 bd-highlight" key={element.id}>
               <Card style={{color: "#000000"}}>
-                <Card.Img />
+                <Card.Img/>
                 <Card.Body>
                   <Card.Title>
                     {element.name}
@@ -177,6 +130,7 @@ const Search = ({ searchType }) => {
             <b>{elementSelected.name}</b>
               <p>{elementSelected.about}</p>
               <p>{new Date(elementSelected.createdAt.seconds * 1000).toLocaleDateString("en-US")}</p>
+              <img alt="img" src={elementSelected.image}></img>
             <button>Upvote</button>
           </>}
           handleClose={togglePopup}
