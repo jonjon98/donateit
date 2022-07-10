@@ -63,6 +63,7 @@ const Search = ({ searchType }) => {
     desc: "",
     image: "",
     name: "",
+    from: "",
   });
  
   const togglePopup = (element) => {
@@ -80,7 +81,7 @@ const Search = ({ searchType }) => {
         {filteredElements.map(element => (
           <li className="d-inline-flex p-2 bd-highlight" key={element.id}>
             <Card style={{color: "#000000"}}>
-              <Card.Img />
+              {element.image ? <Card.Img src={element.image} alt={element.text} /> :null}
               <Card.Body>
                 <Card.Title>
                   {element.name}
@@ -99,6 +100,7 @@ const Search = ({ searchType }) => {
           <b>{elementSelected.name}</b>
             <p>{elementSelected.about}</p>
             <p>{new Date(elementSelected.createdAt.seconds * 1000).toLocaleDateString("en-US")}</p>
+            {elementSelected.image ? <Card.Img src={elementSelected.image} alt={elementSelected.text} /> :null}
           <button>Upvote</button>
         </>}
         handleClose={togglePopup}

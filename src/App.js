@@ -14,6 +14,7 @@ import NotFound from './pages/notFound/NotFound.jsx'
 import PrivateRoute from './context/PrivateRoute.js'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AuthProvider from './context/auth.js'
+import './index.css'
 
 function App() {
   return (

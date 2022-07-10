@@ -1,17 +1,16 @@
 import React from 'react'
 import Popup from '../../components/popup/Popup.jsx';
 import { useState } from 'react';
-import { db, auth } from '../../firebase';
-import { Button, Card } from 'react-bootstrap'
+import { db, auth, storage } from '../../firebase';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { useEffect } from 'react';
-import { onSnapshot, orderBy, collection, query as fireQuery, where, addDoc, doc, Timestamp } from 'firebase/firestore';
+import { ref, getDownloadURL, uploadBytes } from "firebase/storage";
+import { collection, addDoc, Timestamp } from 'firebase/firestore';
+import { useNavigate } from 'react-router-dom';
+import './CreateListing.css';
 
 const CreateListing = ({ searchType }) => {
   const currentUser = auth.currentUser.uid;  
-
-
-  //handle popup
+  const [img, setImg] = useState();
   const [isListingOpen, setIsListingOpen] = useState(false);
   const [listingSelected, setListingSelected] = useState({
     about: "",
@@ -21,6 +20,7 @@ const CreateListing = ({ searchType }) => {
     name: "",
     from: "",
   });
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setListingSelected({ ...listingSelected, [e.target.name]: e.target.value });
@@ -30,7 +30,7 @@ const CreateListing = ({ searchType }) => {
     setIsListingOpen(!isListingOpen);
   }
 
-  const { about, createdAt, desc, image, name, from } = listingSelected;
+  const { about, desc, name } = listingSelected;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -39,11 +39,23 @@ const CreateListing = ({ searchType }) => {
       setListingSelected({ ...listingSelected, error: "All fields are required" });
     }
     try {
+      let url;
+      if (img) {
+        const imgRef = ref(
+          storage,
+          `images/${new Date().getTime()} - ${img.name}`
+        );
+        const snap = await uploadBytes(imgRef, img);
+        const dlUrl = await getDownloadURL(ref(storage, snap.ref.fullPath));
+        url = dlUrl;
+      }
+
       await addDoc(collection(db, "posts"), {
         name,
         about,
         createdAt: Timestamp.fromDate(new Date()),
         desc,
+        image: url || "",
         from: currentUser,
       });
       setListingSelected({
@@ -54,6 +66,8 @@ const CreateListing = ({ searchType }) => {
         name: "",
         from: "",
       });
+      setImg("");
+      navigate('/createListing');
     } catch (err) {
       setListingSelected({ ...listingSelected, error: err.message, loading: false });
     }
@@ -61,14 +75,13 @@ const CreateListing = ({ searchType }) => {
   
   
   return (
-    <div>
+    <div className="box">
         <div>
-          PLACEHOLDERDIV
           <button className="btn btn-dark" onClick={togglePopup}>Create</button>
         </div>
       {isListingOpen && <Popup
         content={
-        <>
+        <div className="form_contents">
           <form onSubmit={handleSubmit}>
             <div className="input_container">
               <label htmlFor="name">Name</label>
@@ -82,9 +95,16 @@ const CreateListing = ({ searchType }) => {
               <label htmlFor="name">Description</label>
               <input type="text" name="desc" value={desc} onChange={handleChange} required="required"/>
             </div>
-            <button type="submit">Submit</button>
+            <input
+            onChange={(e) => setImg(e.target.files[0])}
+            type="file"
+            id="img"
+            accept="image/*" />
+            <div className="button_container">
+              <button type="submit" >Submit</button>
+            </div>
           </form>
-        </>}
+        </ div>}
         handleClose={togglePopup}
       />}
     </div>
