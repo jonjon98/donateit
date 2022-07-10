@@ -40,7 +40,9 @@ const NavigationBar = (props) => {
         <div className="navigation">
           <a className="nav_link" href="/">Home</a>
           <a className="nav_link" href="/rewards">Rewards</a>
+          <a className="nav_link" href="/listing">Products</a>
           <a className="nav_link" href="/profile">Profile</a>
+          <a className="nav_link" href="/listing">Products</a>
           <button onClick={handleSignout} className="btn btn-dark">Logout</button>
         </div>
       </Container>
