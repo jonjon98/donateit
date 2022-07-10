@@ -1,9 +1,13 @@
 import React from 'react'
 import SearchBar from './SearchBar.jsx'
 import Popup from '../popup/Popup.jsx';
+import pic1 from '../../media/faith-yarn-Wr0TpKqf26s-unsplash.jpg'
+import pic2 from '../../media/haryo-setyadi-acn5ERAeSb4-unsplash.jpg'
+import pic3 from '../../media/ryan-hoffman-6Nub980bI3I-unsplash.jpg'
+import pic4 from '../../media/icon.png'
 import { useState } from 'react';
 import { db } from '../../firebase';
-import { Button, Card } from 'react-bootstrap'
+import { Container, Row, Col, Form, Image, Button, Card } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useEffect } from 'react';
 import { onSnapshot, orderBy, collection, query as fireQuery } from 'firebase/firestore';
@@ -151,10 +155,33 @@ const Search = ({ searchType }) => {
         </ul>
         {isOpen && <Popup
           content={<>
-            <b>{elementSelected.name}</b>
-              <p>{elementSelected.about}</p>
-              <p>{new Date(elementSelected.createdAt.seconds * 1000).toLocaleDateString("en-US")}</p>
-            <button>Purchase</button>
+            <div className="maincontainer">
+              <Container>
+                <Row></Row>
+                <Row>
+                  <Col><Image src={pic1} fluid></Image></Col>
+                  <Col><Image src={pic2} fluid></Image></Col>
+                  <Col><Image src={pic3} fluid></Image></Col>
+                </Row>
+                <Row className='align-items-center'>
+                  <Col sm={8}>
+                    <Card>
+                      <Card.Title>{elementSelected.about}</Card.Title>
+                      <Card.Subtitle>{elementSelected.desc}</Card.Subtitle>
+                      <Card.Text>{elementSelected.createdAt.days}</Card.Text>
+                    </Card>
+                  </Col>
+                  <Col sm={4}>
+                    <Row><Button variant='outline-secondary' style={{maxwidth:'40%', margin:'20px', marginBottom:'20px'}}>
+                    <Image src={pic4} fluid width={50} style={{marginRight:'20px'}}></Image>
+                    {elementSelected.createdBy}
+                    </Button>{' '}</Row>
+                    <Button variant='danger'>{elementSelected.likes} Likes</Button>{' '}
+                    <Button variant='secondary'>Interested</Button>{' '}
+                  </Col>
+                </Row>
+              </Container>
+            </div>
           </>}
           handleClose={togglePopup}
         />}
