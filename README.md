@@ -64,7 +64,7 @@
 ## About The Project
 <h3>Login Page</h3>
 
-[![Login Page Screen Shot][login-screenshot]](https://example.com)
+[![Login Page Screen Shot][login-screenshot]](https://melodious-jelly-bcd17e.netlify.app/login)
 <h3>Background</h3>
 In recent years, there has been an increase in the products bought by individuals in developed countries due to the advent of online shopping. This has been made more prevalent due the pandemic causing more people to purchase online goods. This has caused an increase in the number of impulse purchases leading to more items being discarded. Therefore causing the wastage of the population as a whole to increase.
 We have decided to come up with this website to allow users to be more environmentally friendly and donate their items to others when they no longer need them.
@@ -123,13 +123,13 @@ _Below is an example of how you can instruct your audience on installing and set
 ## Usage
 <h3>Home Page</h3>
 
-[![Home Page Screen Shot][home-screenshot]](https://example.com)
+[![Home Page Screen Shot][home-screenshot]](https://melodious-jelly-bcd17e.netlify.app/)
 
 1. Run `npm start` to get it running locally.
 
 2. Login through your google account and it would bring you to the home page.
 
-[![Home Popup Screen Shot][home-popup-screenshot]](https://example.com)
+[![Home Popup Screen Shot][home-popup-screenshot]](https://melodious-jelly-bcd17e.netlify.app/)
 
 3. Here, you are able to find the locations of all the recycling points in Singapore and also be able to look at posts from other users who are doing the recycling.
 
